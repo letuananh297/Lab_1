@@ -5,9 +5,7 @@ fun main() {
         3. 125840, Москва, ул. Вилиса Лациса, д. 14
     """.trimIndent()
 
-    val listAddresses: List<Address>
-
-    listAddresses = parseAddresses(addresses)
+    val listAddresses: List<Address> = parseAddresses(addresses)
 
     println("List of addresses:")
     for (address in listAddresses) {
