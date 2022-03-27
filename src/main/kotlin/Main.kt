@@ -5,17 +5,17 @@ fun main() {
         3. 125840, Москва, ул. Вилиса Лациса, д. 14
     """.trimIndent()
 
-    val list_addresses: List<Address>
+    val listAddresses: List<Address>
 
-    list_addresses = parseAddresses(addresses)
+    listAddresses = parseAddresses(addresses)
 
     println("List of addresses:")
-    for (address in list_addresses) {
+    for (address in listAddresses) {
         println(address)
     }
 
-    println("Address with the biggest index: ${biggest_index(list_addresses)}")
-    println("Address with the smallest index: ${smallest_index(list_addresses)}")
-    println("Address with the longest street: ${longest_street(list_addresses)}")
-    println("Address with the shortest street: ${shortest_street(list_addresses)}")
+    println("Address with the biggest index: ${biggestIndex(listAddresses)}")
+    println("Address with the smallest index: ${smallestIndex(listAddresses)}")
+    println("Address with the longest street: ${longestStreet(listAddresses)}")
+    println("Address with the shortest street: ${shortestStreet(listAddresses)}")
 }

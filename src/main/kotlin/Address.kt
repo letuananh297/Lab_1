@@ -9,7 +9,7 @@ fun parseAddresses(addresses: String) : MutableList<Address> {
         throw IllegalArgumentException("String is empty.")
     }
 
-    val list_addresses = mutableListOf<Address>()
+    val listAddresses = mutableListOf<Address>()
     val strings = addresses.split('\n')
 
     for (str in strings) {
@@ -19,18 +19,18 @@ fun parseAddresses(addresses: String) : MutableList<Address> {
         val street = parts[2].drop(5)
         val house = parts[3].drop(4).toInt()
         val address = Address(index, city, street, house)
-        list_addresses.add(address)
+        listAddresses.add(address)
     }
-    return list_addresses
+    return listAddresses
 }
 
-fun biggest_index(list_addresses: List<Address>) : Address {
-    if (list_addresses.isEmpty()) {
+fun biggestIndex(listAddresses: List<Address>) : Address {
+    if (listAddresses.isEmpty()) {
         throw IllegalArgumentException("List of addresses is empty.")
 
     }
-    var address = list_addresses[0]
-    for (temp in list_addresses) {
+    var address = listAddresses[0]
+    for (temp in listAddresses) {
         if (address.index < temp.index) {
             address = temp
         }
@@ -38,12 +38,12 @@ fun biggest_index(list_addresses: List<Address>) : Address {
     return address
 }
 
-fun smallest_index(list_addresses: List<Address>) : Address {
-    if (list_addresses.isEmpty()) {
+fun smallestIndex(listAddresses: List<Address>) : Address {
+    if (listAddresses.isEmpty()) {
         throw IllegalArgumentException("List of addresses is empty.")
     }
-    var address = list_addresses[0]
-    for (temp in list_addresses) {
+    var address = listAddresses[0]
+    for (temp in listAddresses) {
         if (address.index > temp.index) {
             address = temp
         }
@@ -51,12 +51,12 @@ fun smallest_index(list_addresses: List<Address>) : Address {
     return address
 }
 
-fun longest_street(list_addresses: List<Address>) : Address {
-    if (list_addresses.isEmpty()) {
+fun longestStreet(listAddresses: List<Address>) : Address {
+    if (listAddresses.isEmpty()) {
         throw IllegalArgumentException("List of addresses is empty.")
     }
-    var address = list_addresses[0]
-    for (temp in list_addresses) {
+    var address = listAddresses[0]
+    for (temp in listAddresses) {
         if (address.street.length < temp.street.length) {
             address = temp
         }
@@ -64,12 +64,12 @@ fun longest_street(list_addresses: List<Address>) : Address {
     return address
 }
 
-fun shortest_street(list_addresses: List<Address>) : Address {
-    if (list_addresses.isEmpty()) {
+fun shortestStreet(listAddresses: List<Address>) : Address {
+    if (listAddresses.isEmpty()) {
         throw IllegalArgumentException("List of addresses is empty.")
     }
-    var address = list_addresses[0]
-    for (temp in list_addresses) {
+    var address = listAddresses[0]
+    for (temp in listAddresses) {
         if (address.street.length > temp.street.length) {
             address = temp
         }
