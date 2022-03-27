@@ -40,7 +40,7 @@ internal class AddressKtTest {
             Address(125840, "Москва", "Вилиса Лациса", 14)
         )
         val address2 = biggestIndex(listAddresses2)
-        assertNotNull(biggestIndex(listAddresses2))
+        assertNotNull(address2)
         assertEquals(address2, listAddresses2.maxByOrNull { it.index })
     }
 
@@ -55,7 +55,7 @@ internal class AddressKtTest {
             Address(125840, "Москва", "Вилиса Лациса", 14)
         )
         val address2 = smallestIndex(listAddresses2)
-        assertNotNull(smallestIndex(listAddresses2))
+        assertNotNull(address2)
         assertEquals(address2, listAddresses2.minByOrNull { it.index })
     }
 
@@ -70,7 +70,7 @@ internal class AddressKtTest {
             Address(125840, "Москва", "Вилиса Лациса", 14)
         )
         val address2 = longestStreet(listAddresses2)
-        assertNotNull(longestStreet(listAddresses2))
+        assertNotNull(address2)
         assertEquals(address2, listAddresses2.maxByOrNull { it.street.length })
     }
 
@@ -85,7 +85,7 @@ internal class AddressKtTest {
             Address(125840, "Москва", "Вилиса Лациса", 14)
         )
         val address2 = shortestStreet(listAddresses2)
-        assertNotNull(shortestStreet(listAddresses2))
+        assertNotNull(address2)
         assertEquals(address2, listAddresses2.minByOrNull { it.street.length })
     }
 }
